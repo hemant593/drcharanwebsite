@@ -464,3 +464,193 @@ p{ margin:0; color:var(--ink-soft); line-height:1.7; }
   .patients-photos{ height:240px; }
   .footer-bottom{ flex-direction:column; text-align:center; }
 }
+
+/* =========================================================
+   Inner page hero (services / contact)
+========================================================= */
+.page-hero{
+  position:relative;
+  overflow:hidden;
+  color:var(--white);
+  padding:150px 0 90px;
+}
+.page-hero--compact{ padding:130px 0 70px; }
+.page-hero-bg{
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+}
+.page-hero-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(120deg, rgba(15,42,99,0.94) 0%, rgba(15,42,99,0.78) 60%, rgba(15,42,99,0.55) 100%);
+}
+.page-hero-inner{ position:relative; z-index:1; }
+.page-hero .eyebrow{ color:#BFD3FF; }
+.page-hero h1{ color:var(--white); font-size:clamp(32px,4.4vw,48px); margin:6px 0 12px; }
+.page-hero-tagline{ color:rgba(255,255,255,0.85); font-size:17px; max-width:520px; }
+
+.breadcrumb{
+  display:flex; align-items:center; gap:8px;
+  font-size:13px; color:rgba(255,255,255,0.7);
+  margin-bottom:22px;
+}
+.breadcrumb a{ color:rgba(255,255,255,0.85); }
+.breadcrumb a:hover{ color:var(--white); }
+.breadcrumb span:last-child{ color:var(--white); font-weight:600; }
+
+/* =========================================================
+   Service detail
+========================================================= */
+.service-detail{ padding:100px 0; }
+.service-detail-grid{
+  display:grid;
+  grid-template-columns:1fr 0.9fr;
+  gap:56px;
+  align-items:center;
+}
+.service-detail-copy h2{ font-size:clamp(26px,3vw,34px); margin-bottom:16px; }
+.service-detail-copy > p{ font-size:16px; margin-bottom:26px; max-width:520px; }
+.feature-list{ display:flex; flex-direction:column; gap:14px; margin-bottom:32px; }
+.feature-list li{
+  display:flex; align-items:flex-start; gap:12px;
+  font-size:15px; color:var(--ink); font-weight:500;
+}
+.feature-list .check{
+  flex:0 0 22px; width:22px; height:22px; border-radius:50%;
+  background:var(--blue-100); position:relative; margin-top:1px;
+}
+.feature-list .check::after{
+  content:''; position:absolute; inset:0;
+  background:var(--blue-500);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='black' stroke-width='3'/%3E%3C/svg%3E") center/50% no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 6L9 17l-5-5' fill='none' stroke='black' stroke-width='3'/%3E%3C/svg%3E") center/50% no-repeat;
+}
+.service-detail-photo img{
+  border-radius:var(--radius-lg);
+  aspect-ratio:4/3.4;
+  object-fit:cover;
+  box-shadow:var(--shadow-card);
+}
+
+/* Light "why" variant used on service pages */
+.why-choose--light{ background:var(--blue-050); color:var(--ink); padding:90px 0; }
+.why-choose--light .why-bg,
+.why-choose--light .why-overlay{ display:none; }
+.why-inner--light{ align-items:start; }
+.why-inner--light .eyebrow{ color:var(--blue-500); }
+.why-inner--light h2{ color:var(--blue-900); font-size:clamp(26px,3.2vw,34px); }
+.why-choose--light .why-num{ color:var(--blue-100); }
+.why-choose--light .why-point h3{ color:var(--blue-900); font-size:17px; margin:4px 0 8px; }
+.why-choose--light .why-point p{ color:var(--ink-soft); }
+
+/* =========================================================
+   Contact page
+========================================================= */
+.contact-info{ padding:80px 0 20px; }
+.contact-info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.contact-info-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  padding:28px;
+  box-shadow:var(--shadow-card);
+}
+.contact-icon{
+  width:46px; height:46px; border-radius:50%;
+  background:var(--blue-100);
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:16px;
+}
+.contact-info-card h3{ font-size:17px; margin-bottom:8px; }
+.contact-info-card p{ font-size:14.5px; }
+
+.contact-main{ padding:70px 0 110px; }
+.contact-main-grid{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:48px;
+  align-items:start;
+}
+.contact-form-wrap h2{ font-size:clamp(26px,3vw,32px); margin:8px 0 12px; }
+.contact-form-intro{ font-size:15px; margin-bottom:30px; max-width:460px; }
+
+.contact-form{ display:flex; flex-direction:column; gap:18px; }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.form-field{ display:flex; flex-direction:column; gap:8px; }
+.form-field label{ font-size:13.5px; font-weight:600; color:var(--blue-900); }
+.form-field input,
+.form-field select,
+.form-field textarea{
+  font-family:var(--font-body);
+  font-size:14.5px;
+  padding:13px 16px;
+  border-radius:var(--radius-sm);
+  border:1px solid var(--line);
+  background:var(--blue-050);
+  color:var(--ink);
+  resize:vertical;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{
+  outline:none;
+  border-color:var(--blue-500);
+  box-shadow:0 0 0 3px rgba(62,123,250,0.18);
+}
+.form-field.has-error input,
+.form-field.has-error textarea{ border-color:#E1554A; }
+.field-error{
+  font-size:12.5px; color:#E1554A; min-height:14px; display:block;
+}
+.contact-form .btn{ align-self:flex-start; margin-top:4px; }
+.form-status{
+  font-size:14px; font-weight:600; min-height:20px; margin:0;
+}
+.form-status.success{ color:#1E9E63; }
+.form-status.error{ color:#E1554A; }
+
+.contact-map-wrap{ display:flex; flex-direction:column; gap:24px; }
+.contact-map{
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-card);
+  aspect-ratio:4/3.2;
+}
+.contact-map iframe{ width:100%; height:100%; border:0; display:block; }
+.contact-hours-card{
+  background:var(--blue-900);
+  color:var(--white);
+  border-radius:var(--radius-lg);
+  padding:28px 30px;
+}
+.contact-hours-card h3{ color:var(--white); font-size:16px; margin-bottom:16px; }
+.hours-list{ display:flex; flex-direction:column; gap:12px; }
+.hours-list li{
+  display:flex; justify-content:space-between;
+  font-size:14px; color:rgba(255,255,255,0.85);
+  padding-bottom:12px;
+  border-bottom:1px solid rgba(255,255,255,0.12);
+}
+.hours-list li:last-child{ border-bottom:none; padding-bottom:0; }
+.hours-list li span:first-child{ font-weight:600; color:var(--white); }
+
+/* =========================================================
+   Responsive — inner pages
+========================================================= */
+@media (max-width: 980px){
+  .service-detail-grid{ grid-template-columns:1fr; }
+  .service-detail-photo{ order:-1; }
+  .why-inner--light .why-points{ grid-template-columns:1fr; }
+  .contact-main-grid{ grid-template-columns:1fr; }
+  .contact-info-grid{ grid-template-columns:1fr; }
+}
+
+@media (max-width: 620px){
+  .page-hero{ padding:130px 0 60px; }
+  .form-row{ grid-template-columns:1fr; }
+  .contact-form .btn{ width:100%; }
+}
