@@ -35,14 +35,15 @@ body{
 img{ max-width:100%; display:block; }
 a{ color:inherit; text-decoration:none; }
 ul{ margin:0; padding:0; list-style:none; }
-h1,h2,h3{ font-family:var(--font-display); margin:0; color:var(--blue-900); line-height:1.15; }
-p{ margin:0; color:var(--ink-soft); line-height:1.7; }
+h1,h2,h3,h4{ font-family:var(--font-display); margin:0; color:var(--blue-900); line-height:1.15; }
+p{ margin:0; color:var(--ink-soft); line-height:1.4; }
+ul{ font-size:15px; color:var(--ink-soft); line-height: 1.4; list-style: disc; }
 
 .container{
   width:100%;
   max-width:var(--container);
   margin:0 auto;
-  padding:0 24px;
+  padding:0 20px;
 }
 
 .text-accent{ color:var(--blue-500); }
@@ -214,7 +215,7 @@ p{ margin:0; color:var(--ink-soft); line-height:1.7; }
 }
 .quote-avatar img{ width:100%; height:100%; object-fit:cover; }
 .quote-mark{ display:block; margin-bottom:18px; }
-.quote-body p{ font-size:22px; color:var(--blue-900); font-weight:500; line-height:1.6; max-width:640px; }
+.quote-body p{ font-size:22px; color:var(--blue-900); font-weight:500; line-height:1.6; max-width:fit-content; }
 .quote-author{ display:flex; align-items:center; gap:16px; margin-top:24px; font-weight:700; color:var(--blue-900); }
 .quote-author .rule{ width:36px; height:2px; background:var(--blue-500); display:inline-block; }
 
@@ -342,7 +343,7 @@ p{ margin:0; color:var(--ink-soft); line-height:1.7; }
 /* =========================================================
    Patients
 ========================================================= */
-.patients{ padding:110px 0; }
+.patients{ padding:110px 0; background: var(--blue-050);}
 .patients-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -429,9 +430,9 @@ p{ margin:0; color:var(--ink-soft); line-height:1.7; }
 /* =========================================================
    Responsive
 ========================================================= */
-@media (max-width: 980px){
-  .hero-inner, .quote-inner, .why-inner, .facility-grid, .patients-grid{
-    grid-template-columns:1fr;
+@media (max-width: 1200px){
+  .hero-inner, .why-inner, .facility-grid, .patients-grid{
+    grid-template-columns:1fr 1fr;
   }
   .quote-inner{ text-align:center; }
   .quote-avatar{ margin:0 auto; }
@@ -440,11 +441,11 @@ p{ margin:0; color:var(--ink-soft); line-height:1.7; }
   .pricing-grid{ grid-template-columns:1fr; max-width:420px; margin:0 auto; }
   .why-points{ grid-template-columns:1fr; }
   .facility-photo{ min-height:280px; }
-  .footer-grid{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1, 1fr; }
   .patients-photos{ margin-top:20px; }
 }
 
-@media (max-width: 860px){
+@media (max-width: 768px){
   .main-nav, .header-phone{ display:none; }
   .hamburger{ display:flex; }
   .main-nav.is-open{
@@ -455,9 +456,9 @@ p{ margin:0; color:var(--ink-soft); line-height:1.7; }
   }
 }
 
-@media (max-width: 620px){
+@media (max-width: 480px){
   .cards-grid{ grid-template-columns:1fr; }
-  .hero{ padding:56px 0 64px; }
+  .hero{ padding:56px 15px 64px; }
   .hero-photo{ width:90%; }
   .floaty{ width:42px; height:42px; }
   .p1,.p2,.p3{ width:110px; height:140px; }
@@ -641,7 +642,7 @@ p{ margin:0; color:var(--ink-soft); line-height:1.7; }
 /* =========================================================
    Responsive — inner pages
 ========================================================= */
-@media (max-width: 980px){
+@media (max-width: 768px){
   .service-detail-grid{ grid-template-columns:1fr; }
   .service-detail-photo{ order:-1; }
   .why-inner--light .why-points{ grid-template-columns:1fr; }
@@ -649,7 +650,7 @@ p{ margin:0; color:var(--ink-soft); line-height:1.7; }
   .contact-info-grid{ grid-template-columns:1fr; }
 }
 
-@media (max-width: 620px){
+@media (max-width: 480px){
   .page-hero{ padding:130px 0 60px; }
   .form-row{ grid-template-columns:1fr; }
   .contact-form .btn{ width:100%; }
