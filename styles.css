@@ -719,6 +719,14 @@ ul{ font-size:15px; color:var(--ink-soft); line-height: 1.4; list-style: disc; }
   .footer-grid{ grid-template-columns:1fr; }
   .hero, .quote-section, .specializations, .why-choose, .facility, .patients, .cta{padding-top: 50px; padding-bottom: 50px;}
   .site-footer { padding: 50px 20px 20px 20px;}
+  .pricing-slider{ gap:6px; }
+  .pricing-track{ gap:0; padding:8px 0 24px; }
+  .pricing-track .price-card{
+    flex:0 0 100%;
+    width:100%;
+    scroll-snap-align:center;
+  }
+  .slider-arrow{ width:36px; height:36px; }
 
 }
 
@@ -743,6 +751,8 @@ ul{ font-size:15px; color:var(--ink-soft); line-height: 1.4; list-style: disc; }
   .rating-chip {right: unset;}
   .cta {padding-top: 50px; padding-bottom: 50px;}
   .site-footer {padding:50px 20px 35px 20px;}
+  .pricing{ padding:60px 0; }
+  .pricing-track .price-card{ padding:28px 22px; }
 
 }
 
