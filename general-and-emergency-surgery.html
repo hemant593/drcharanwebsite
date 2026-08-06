@@ -14,12 +14,30 @@
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
     <a href="/" class="logo-icon">
-      <img src="./images/dr-charan-logo.png" alt="dr charan singh logo">
+        <img src="./images/dr-charan-singn-choudhary-logo.png" alt="dr charan singh logo">
     </a>
-
+    <link rel="icon" type="image/png" href="/images/dr-charan-singh-favicon.png">
+    
     <nav class="main-nav" id="mainNav">
       <a href="index.html">Home</a>
-      <a href="index.html#services" class="active">Services</a>
+
+      <div class="nav-item has-dropdown" id="servicesNavItem">
+        <a href="index.html#services" class="nav-dropdown-toggle active" id="servicesToggle" aria-expanded="false">
+          Services
+          <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </a>
+        <div class="nav-dropdown">
+          <a href="laser-piles-treatment.html">Laser Piles Treatment</a>
+          <a href="laser-fistula-fissure-surgery.html">Laser Fistula &amp; Fissure Surgery</a>
+          <a href="varicose-vein-laser-treatment.html">Varicose Vein Laser Treatment</a>
+          <a href="laparoscopic-hernia-repair.html">Laparoscopic Hernia Repair</a>
+          <a href="gallbladder-appendix-surgery.html">Gallbladder &amp; Appendix Surgery</a>
+          <a href="general-and-emergency-surgery.html">General &amp; Emergency Surgery</a>
+        </div>
+      </div>
+
       <a href="index.html#about">About</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -175,6 +193,7 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="./javascripts/script.js"></script>
+<script src="./javascripts/services-dropdown.js"></script>
 </body>
 </html>
